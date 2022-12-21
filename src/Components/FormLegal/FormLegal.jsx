@@ -135,6 +135,8 @@ function FormLegal(){
             onBlur={handleBlur}
             placeholder="dd/mm/yyyy"      
             /><br/>
+             {errors.birthday && <p className="error-message">{errors.birthday}</p>}
+            <br/>
 
             <label htmlFor="phone">Teléfono:</label><br/>
             <input 
@@ -144,8 +146,11 @@ function FormLegal(){
             value={formData.phone}
             onChange={handleChange}
             onBlur={handleBlur}
-            placeholder="Lada(xx) xxx-xxxx" 
+            placeholder="Ej: Lada(55) 123 4567" 
             /><br/>
+             {errors.phone && <p className="error-message">{errors.phone}</p>}
+            <br/>
+            
 
             <label htmlFor="address">Domicilio:</label><br/>
             <input 
@@ -157,6 +162,8 @@ function FormLegal(){
             onBlur={handleBlur}
             placeholder="Tu direccion aqui"     
             /><br/>
+             {errors.address && <p className="error-message">{errors.address}</p>}
+            <br/>
 
             <label htmlFor="identification">Identificación:</label><br/>
             <input 
@@ -167,7 +174,10 @@ function FormLegal(){
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Ejemplo: INE / folio 014567" 
-            /><br/><br/>
+            /><br/>
+              {errors.identification && <p className="error-message">{errors.identification}</p>}
+            <br/>
+            <br/>
 
             <input type="submit" value="Enviar"/>
             </form>

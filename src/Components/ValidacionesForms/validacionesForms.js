@@ -24,16 +24,32 @@ function validacionesForms(name,value){
         else{return {nationality:null}}
     case "birthday":
         console.log("Entro a birthday")
-        break
+        if (value === "") { return {birthday:"El campo fecha de nacimiento esta vacio"} }
+        if (!(/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/.test(value))) { return {birthday:"La fecha ingresada no es valida"} }
+        if (new Date(value) >= new Date()) {return {birthday: "La fecha ingresada es futura"}}
+        let mayor = new Date() - (18 * 365 * 24 * 60 * 60 * 1000);
+        let menor = new Date() - (120 * 365 * 24 * 60 * 60 * 1000);
+        if ((new Date(value)) >= mayor) {return {birthday: "No puedes ser menor de edad para este tramite"}}
+        if ((new Date(value)) < menor) {return {birthday: "La fecha indica que tienes 120 años o mas"}}
+        else{return {birthday:null}}
     case "phone":
         console.log("Entro a phone")
-        break
+        // let num = value.replace(/\D/g, '');
+        // console.log(num)
+        if (value === "") { return {phone:"El campo telefono esta vacio"} }
+        if (!(/^\d{2,3}\s\d{3}\s\d{4}$/.test(value)) ) { return {phone:"El Telefono ingresado no es valido"} }
+        if (value.length > 12) {return {phone: "El telefono excede la cantidad de caracteres permitidos"}}
+        else{return {phone:null}}
     case "address":
         console.log("Entro a address")
-        break
+        if (value.trim() === "") { return {address:"El campo Direccion esta vacio"} }
+        if (value.length > 80) {return {address: "El campo direccion excede la cantidad de caracteres permitidos"}}
+        else{return {address:null}}
     case "identification":
         console.log("Entro a identification")
-        break
+        if (value.trim() === "") { return {identification:"El campo identificacion esta vacio"} }
+        if (!(/^[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{10}$/.test(value))) { return {identification:"El folio de la INE no es valido"} }
+        else{return {identification:null}}
   
     default:
         break;
