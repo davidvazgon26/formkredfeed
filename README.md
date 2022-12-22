@@ -17,6 +17,7 @@ Proyecto de 2 formularios independientes
 * EL proyecto esta listo para implementar los test necesarios con Jest version 5.16, queda pendiente porque tomaria mas tiempo la finalizacion del proyecto y no fue requerimiento del challenge, pero puedes correrlos con "npm test"
 * Se despliega el proyecto en Netlify con el siguiente enlace: https://stirring-kheer-c3168a.netlify.app/
 * Al enviar la informacion o darle enviar o submit, solo envia un mensaje tipo alerta ya que no existe el backend de este proyecto.
+* Algunas de las validaciones son genericas al no tener las reglas de negocio.
 
 
 
