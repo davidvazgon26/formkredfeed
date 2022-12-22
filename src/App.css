@@ -14,8 +14,9 @@ body{
 }
 
 .Container{
-  margin: 7rem;
-  border: 5px solid white;
+  margin: 3rem;
+  /* border: 5px solid white; */
+  display: flex;
 }
 
 .App {
@@ -56,3 +57,16 @@ body{
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 1300px) {
+  /* Estilos para pantallas con un ancho menor a 1300px */
+  
+  .Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
