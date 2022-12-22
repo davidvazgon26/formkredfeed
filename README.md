@@ -15,6 +15,8 @@ Proyecto de 2 formularios independientes
 * La validacion de los formularios esta en el archivo "validacionesForms.js" para re utilizar el codigo para ambos formularios 
 * Cada componente se separa y organiza en carpetas independientes, cada una con su archivo JSX y CSS 
 * EL proyecto esta listo para implementar los test necesarios con Jest version 5.16, queda pendiente porque tomaria mas tiempo la finalizacion del proyecto y no fue requerimiento del challenge, pero puedes correrlos con "npm test"
+* Se despliega el proyecto en Netlify con el siguiente enlace: https://stirring-kheer-c3168a.netlify.app/
+* Al enviar la informacion o darle enviar o submit, solo envia un mensaje tipo alerta ya que no existe el backend de este proyecto.
 
 
 
